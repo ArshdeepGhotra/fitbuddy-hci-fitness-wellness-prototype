@@ -1,0 +1,724 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0077cc; 
+    background-image: url('nutrition-banner.jpg');
+    background-size: cover; 
+    background-position: center; 
+    color: #003366;
+    
+    padding: 50px 0;
+    text-align: center;
+}
+
+
+
+/* Tiles container adjusted for horizontal layout */
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+/* Tile styling for horizontal layout */
+.tile {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    flex: 1; 
+    min-width: 160px; 
+    max-width: 18%; 
+}
+
+.tile:hover {
+    transform: translateY(-5px);
+}
+
+.tile img {
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+.tile h2 {
+    color: #333;
+    font-size: 1.5em;
+}
+
+.tile p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer a {
+    color: #49c1a2;
+    text-decoration: none;
+}
+
+/* Responsive adjustments for medium screens */
+@media (max-width: 1024px) {
+    .tile {
+        max-width: 45%; /* Two tiles per row */
+    }
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+    .tile {
+        max-width: 90%; /* Full width for small screens */
+    }
+}
+
+
+
+/* Styles for section content */
+.section {
+    display: none; 
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out; 
+    padding: 20px; 
+}
+
+/* Class to add when a section is active */
+.section.show {
+    display: block; 
+    opacity: 1; 
+}
+
+/* Responsive adjustments for medium screens */
+@media (max-width: 1024px) {
+    .tile {
+        max-width: 45%; /* Two tiles per row */
+    }
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+    .tile {
+        max-width: 90%; /* Full width for small screens */
+    }
+}
+
+/* Styles for sub-header */
+#sub-header {
+    text-align: center;
+    font-size: 2em; 
+    margin-top: 20px; 
+}
+
+main {
+    overflow: hidden;
+}
+
+.tiles-container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+#meditation-timer {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f2f2f2; 
+    border-radius: 10px;
+  }
+  
+  #meditation-timer h2 {
+    margin-bottom: 15px;
+  }
+  
+  .time-btn {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #e7e7e7;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .time-btn:hover {
+    background-color: #dcdcdc; 
+  }
+  
+  #timer-display {
+    margin: 20px 0;
+    font-size: 2em;
+  }
+  
+  #start-timer {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #start-timer:hover {
+    background-color: #45a049;
+  }
+
+  #pause-timer, #reset-timer {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #f9c744; /* Yellow */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #pause-timer:hover, #reset-timer:hover {
+    background-color: #f9b233; /* Darker Yellow */
+  }
+  
+
+
+  /*expandable sections-*/
+
+  .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin-top: 5px;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+
+
+ 
+  .breathing-exercises-videos {
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.breathing-exercises-videos h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    gap: 20px; 
+}
+
+.video-container {
+    flex: 1 1 22%; 
+    box-sizing: border-box; 
+}
+
+.video-container h3 {
+    margin: 0.5em 0;
+}
+
+.video-container p {
+    margin-bottom: 1em;
+}
+
+.video-container iframe {
+    width: 100%; 
+    height: 315px; 
+    border: 1px solid #ccc; 
+}
+
+@media screen and (max-width: 1200px) {
+    .video-container {
+        flex-basis: 48%; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .video-container {
+        flex-basis: 100%; 
+    }
+}
+
+.meditation-videos {
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.meditation-videos h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.video-container {
+    flex: 1 1 22%;
+    box-sizing: border-box;
+}
+
+.video-container h3 {
+    margin: 0.5em 0;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: 1px solid #ccc;
+}
+
+@media screen and (max-width: 1200px) {
+    .video-container {
+        flex-basis: 48%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .video-container {
+        flex-basis: 100%;
+    }
+}
+
+
+
+
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1100px; 
+    margin: 0 auto; 
+}
+
+.recipe-tile {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.recipe-tile h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .recipes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .recipes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+.recipe-details {
+    display: none; 
+    background-color: #f9f9f9; 
+    padding: 15px;
+    margin-top: 10px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.recipe-tile h2 {
+    cursor: pointer; 
+}
+
+
+
+
+/* Nutrient Tracker Section Styling */
+#nutrient-tracker-section {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+/* Form Styling */
+#food-entry-form {
+    margin-bottom: 20px;
+}
+
+#food-entry-form label, 
+#food-entry-form select, 
+#food-entry-form input[type=number], 
+#food-entry-form button {
+    margin-bottom: 10px;
+    display: block; 
+    width: 100%; 
+}
+
+#food-entry-form button {
+    margin-top: 0; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none; 
+}
+
+/* Buttons Styling */
+button {
+    background-color: #0077cc; /* Primary button color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1rem; 
+}
+
+button:hover {
+    background-color: #005fa3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+#reset-entries {
+    background-color: #f44336;
+    display: block; 
+    width: 100%; 
+
+#reset-entries:hover {
+    background-color: #d32f2f; 
+}
+
+/* Daily Intake Summary Styling */
+#daily-intake-summary {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+#daily-intake-summary h3 {
+    font-size: 1.25rem; 
+}
+
+#daily-intake-summary p {
+    font-size: 1rem; 
+}
+
+/* Added Food Items List Styling */
+#food-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+#food-list li {
+    background-color: #e7e7e7;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    #food-entry-form label, 
+    #food-entry-form select, 
+    #food-entry-form input[type=number], 
+    #food-entry-form button,
+    #reset-entries {
+        margin-bottom: 5px; 
+        padding: 8px 10px; 
+    }
+}
+
+input[type=number], select {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+    margin-bottom: 15px;
+}
+
+input[type=number]:focus, select:focus {
+    outline: none;
+    border-color: #0077cc; 
+}
+
+
+
+
+/* Hydration Tracker Section Styling */
+#hydration-tracker-section {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px; 
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 20px;
+    text-align: center;
+    width: 300px; 
+    margin: 20px auto;
+}
+
+#hydration-tracker-section .hydration-btns {
+    display: inline-block; /* Align buttons next to each other */
+    margin: 0 5px; /* Space between buttons */
+}
+
+#hydration-tracker-section .hydration-info {
+    text-align: center; 
+    margin-top: 10px; 
+}
+
+#hydration-tracker-section button {
+    width: auto; 
+    padding: 10px;
+}
+
+/* Progress Bar Container */
+#progress-bar-container {
+    background-color: #e0f2f1;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 3px; 
+    box-sizing: border-box;
+    background-image: linear-gradient(-45deg, #00acc1 25%, #0097a7 25%, #0097a7 50%, #00acc1 50%, #00acc1 75%, #0097a7 75%, #0097a7);
+    background-size: 200% 200%;
+    animation: wave-animation 4s linear infinite;
+    width: 300px; 
+    margin: 20px auto;
+}
+
+/* Progress Bar */
+#progress-bar {
+    height: 20px;
+    background-color: #00acc1;
+    width: 0%; /* Initial state */
+    border-radius: 3px; 
+    transition: width 0.5s ease-in-out;
+}
+
+/* Input for Container Volume */
+#water-container-volume {
+    width: calc(100% - 40px); 
+    padding: 10px;
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Buttons Styling */
+#add-water, #subtract-water {
+    background-color: #0077cc; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1rem; 
+    margin-right: 5px; 
+}
+
+#add-water:hover, #subtract-water:hover {
+    background-color: #005fa3; 
+    transform: translateY(-2px);
+}
+
+/* Daily Intake and Goal Styling */
+#hydration-info p {
+    font-size: 1rem; 
+    margin: 5px 0; 
+}
+
+/* Educational Snippets Styling */
+#hydration-tips {
+    background-color: #f9f9f9; 
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #0077cc;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    #hydration-tracker-section,
+    #progress-bar-container,
+    #add-water, #subtract-water {
+        max-width: 90%; 
+        margin: 10px auto; 
+        padding: 10px; 
+    }
+}
+
+
+@keyframes wave-animation {
+    0%, 100% {
+      background-position: left;
+    }
+    50% {
+      background-position: right;
+    }
+  }
+  
+  @keyframes ripple {
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 172, 193, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(0, 172, 193, 0);
+    }
+  }
+  
+  button {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(0, 172, 193, 0.7);
+    opacity: 0;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: ripple 0.6s linear infinite;
+  }
+  
+  button:active::after {
+    animation: none;
+    display: none;
+  }
+
+
+
+
+.quiz-question {
+    margin-bottom: 20px;
+}
+
+.quiz-question label {
+    display: block; 
+    margin: 10px 0; 
+    cursor: pointer; 
+}
+
+.quiz-question input[type="radio"] {
+    margin-right: 10px; 
+}
+
+/* Feedback styling */
+.feedback {
+    margin-top: 5px;
+    font-style: italic;
+}
+
+
+.quiz-container {
+    padding: 20px;
+    background-color: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Center the Content */
+#nutrition-quiz-section {
+    max-width: 1000px; 
+    margin: 0 auto; 
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+/* Use Columns */
+@media screen and (min-width: 768px) { 
+    .quiz-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px; 
+    }
+}
+
+/* Background and Borders */
+#nutrition-quiz-section {
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Whitespace Management */
+.quiz-question {
+    padding: 15px; 
+    margin-bottom: 20px;
+}
+
+
+  
+
+
+
+
+
+
+  
+  
+}

@@ -1,0 +1,86 @@
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    color: #fff;
+}
+
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: #fff; /* White text */
+    display: flex;
+    flex-direction: column;
+   
+}
+
+header {
+    background: url('https://png.pngtree.com/background/20230610/original/pngtree-the-gym-scene-where-people-are-sitting-in-a-gym-picture-image_3108802.jpg') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    
+}
+
+header h1 {
+    margin: 0;
+    padding: 20px;
+}
+
+.workout-container {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    font-size: 25px;
+    
+}
+
+.workout-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #333; 
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    flex: 1;
+    box-sizing: border-box;
+    color: #fff;
+    
+}
+
+.workout-section h2 {
+    border-bottom: 1px solid #fff; 
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.workout-section ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    list-style-type: none;
+    padding: 0;
+    
+
+    
+}
+
+.workout-section li {
+    margin-bottom: 10px;
+    cursor: pointer; 
+    
+}
+
+@media (max-width: 768px) {
+    .workout-container {
+        flex-direction: column; 
+    }
+}
