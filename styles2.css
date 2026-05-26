@@ -1,0 +1,500 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0077cc; /* Fallback color */
+    background-image: url('mental\ health\ banner.jpg');
+    background-size: cover;
+    background-position: center; 
+    color: #003366;
+    
+    padding: 50px 0;
+    text-align: center;
+}
+
+
+
+/* Tiles container adjusted for horizontal layout */
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+/* Tile styling for horizontal layout */
+.tile {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    flex: 1; 
+    min-width: 160px; 
+    max-width: 18%;
+}
+
+.tile:hover {
+    transform: translateY(-5px);
+}
+
+.tile img {
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+.tile h2 {
+    color: #333;
+    font-size: 1.5em;
+}
+
+.tile p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer a {
+    color: #49c1a2;
+    text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+    .tile {
+        max-width: 45%; /* Two tiles per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .tile {
+        max-width: 90%; 
+    }
+}
+
+
+
+/* Styles for section content */
+.section {
+    display: none; 
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out; 
+    padding: 20px; 
+}
+
+/* Class to add when a section is active */
+.section.show {
+    display: block;
+    opacity: 1;
+}
+
+/* Responsive adjustments for medium screens */
+@media (max-width: 1024px) {
+    .tile {
+        max-width: 45%; 
+    }
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+    .tile {
+        max-width: 90%;
+    }
+}
+
+/* Styles for sub-header */
+#sub-header {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 20px; /* Spacing above sub-header */
+}
+
+main {
+    overflow: hidden; 
+}
+
+.tiles-container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+#meditation-timer {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f2f2f2; /* Light grey background */
+    border-radius: 10px;
+    border: 1px solid #ccc; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    max-width: 600px; 
+    width: 100%; 
+}
+
+.meditation-timer-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 30vh;
+    padding: 20px; 
+  }
+  
+
+  
+  #meditation-timer h2 {
+    margin-bottom: 15px;
+  }
+  
+  .time-btn {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #e7e7e7; /* Light grey */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .time-btn:hover {
+    background-color: #dcdcdc; /* Darker grey */
+  }
+  
+  #timer-display {
+    margin: 20px 0;
+    font-size: 2em;
+  }
+  
+  #start-timer {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #start-timer:hover {
+    background-color: #45a049;
+  }
+
+  #pause-timer, #reset-timer {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #f9c744; /* Yellow */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #pause-timer:hover, #reset-timer:hover {
+    background-color: #f9b233; /* Darker Yellow */
+  }
+  
+
+
+
+  
+  /*expandable sections-*/
+
+
+  #guided-meditation-section,
+  #breathing-exercises-section {
+    text-align: center;
+    color: #1b2730;
+    margin: 20px 0; 
+  }
+  
+  .accordion,
+  .panel {
+    background-color: #eee; 
+    width: calc(50% - 36px); 
+    margin-left: auto; 
+    margin-right: auto; 
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+  }
+  
+  .accordion {
+    width: 50%;
+    padding: 18px;
+    border: 1px solid #0077cc;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-top: 5px;
+    background-color: #eee; 
+  }
+  
+
+  
+  .panel {
+    padding: 18px;
+    display: none;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 8px  rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+  }
+  
+
+
+
+ 
+  .breathing-exercises-videos {
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.breathing-exercises-videos h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.video-container {
+    flex: 1 1 22%; 
+    box-sizing: border-box; 
+}
+
+.video-container h3 {
+    margin: 0.5em 0;
+}
+
+.video-container p {
+    margin-bottom: 1em;
+}
+
+.video-container iframe {
+    width: 100%; 
+    height: 315px; 
+    border: 1px solid #ccc; 
+}
+
+@media screen and (max-width: 1200px) {
+    .video-container {
+        flex-basis: 48%; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .video-container {
+        flex-basis: 100%;
+    }
+}
+
+.meditation-videos {
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.meditation-videos h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.video-container {
+    flex: 1 1 22%;
+    box-sizing: border-box;
+}
+
+.video-container h3 {
+    margin: 0.5em 0;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: 1px solid #ccc;
+}
+
+@media screen and (max-width: 1200px) {
+    .video-container {
+        flex-basis: 48%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .video-container {
+        flex-basis: 100%;
+    }
+}
+
+
+
+
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.recipe-tile {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.recipe-tile h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .recipes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .recipes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+.recipe-details {
+    display: none; 
+    background-color: #f9f9f9; 
+    padding: 15px;
+    margin-top: 10px; 
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.recipe-tile h2 {
+    cursor: pointer;
+}
+
+
+
+
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Container for the resources section */
+#resources-section {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 40px 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section headings and text styles */
+.resources-heading {
+    font-size: 32px; 
+    color: #0077cc; 
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0077cc;
+    margin-bottom: 30px; 
+    text-align: center;
+}
+
+.resources-subheading {
+    font-size: 24px;
+    color: #005a9c; 
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.introductory-text, .support-text {
+    font-size: 18px; 
+    color: #555;
+    margin-bottom: 20px; 
+    line-height: 1.8; 
+}
+
+/* Style for individual resource links */
+.resource-list {
+    list-style-type: none;
+    margin: 20px 0; 
+}
+
+.resource-list li {
+    background: #f2f2f2;
+    border-left: 5px solid #0077cc; 
+    margin-bottom: 10px; 
+    padding: 15px;
+    transition: background-color 0.3s ease-in-out; 
+}
+
+.resource-list li a {
+    display: block; 
+    text-decoration: none; 
+    color: #005a9c;
+    font-weight: 600;
+}
+
+.resource-list li a:hover {
+    color: #0077cc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #resources-section {
+        padding: 20px;
+    }
+
+    .resources-heading {
+        font-size: 28px;
+    }
+
+    .resources-subheading {
+        font-size: 20px; 
+    }
+
+    .introductory-text, .support-text {
+        font-size: 16px; 
+    }
+}
+
+
